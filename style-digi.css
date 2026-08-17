@@ -422,3 +422,52 @@ a {
     max-width: 320px;
   }
 }
+
+.booking-payment {
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  color: #81766e;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.social {
+  padding: 55px 20px;
+
+  border-top: 1px solid rgba(44, 38, 34, 0.15);
+}
+
+.social__inner {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+
+.social .section-label {
+  margin-bottom: 25px;
+}
+
+.social__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.social__links a {
+  padding-bottom: 3px;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid rgba(44, 38, 34, 0.4);
+
+  transition: opacity 0.2s ease;
+}
+
+.social__links a:hover {
+  opacity: 0.55;
+}
