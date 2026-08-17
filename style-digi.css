@@ -1,0 +1,424 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f0eb;
+  color: #2c2622;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.digi-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================================
+   CONTAINERS
+========================================= */
+
+.digi-container {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.digi-narrow {
+  width: min(100%, 720px);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.digi-hero {
+  padding: 35px 0 95px;
+
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 75px;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+
+  color: #756c65;
+
+  transition: opacity 0.25s ease;
+}
+
+.back-link:hover {
+  opacity: 0.5;
+}
+
+.digi-label {
+  margin-bottom: 22px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+
+  color: #756c65;
+}
+
+.digi-title {
+  max-width: 800px;
+  margin: 0 auto;
+
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.digi-intro {
+  max-width: 650px;
+  margin: 30px auto 0;
+
+  font-size: 20px;
+  line-height: 1.55;
+
+  color: #625a54;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.digi-section {
+  padding: 90px 0;
+}
+
+.digi-section--border {
+  border-top: 1px solid rgba(44, 38, 34, 0.13);
+}
+
+.section-label {
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+
+  color: #756c65;
+}
+
+.section-text {
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #625a54;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+.section-text--large {
+  font-size: 21px;
+  line-height: 1.6;
+
+  color: #2c2622;
+}
+
+/* =========================================
+   TOPICS / ACCORDION
+========================================= */
+
+.topics {
+  width: 100%;
+
+  border-top: 1px solid rgba(44, 38, 34, 0.13);
+}
+
+.topic {
+  border-bottom: 1px solid rgba(44, 38, 34, 0.13);
+}
+
+/* Кликабельная строка */
+
+.topic__summary {
+  display: grid;
+  grid-template-columns: 55px 1fr 30px;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 27px 0;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+.topic__summary::-webkit-details-marker {
+  display: none;
+}
+
+.topic__number {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+
+  color: #9a8f86;
+}
+
+.topic__title {
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+/* Плюс */
+
+.topic__icon {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(44, 38, 34, 0.25);
+  border-radius: 50%;
+}
+
+.topic__icon::before,
+.topic__icon::after {
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 1px;
+
+  background: #2c2622;
+
+  transform: translate(-50%, -50%);
+
+  transition: transform 0.3s ease;
+}
+
+.topic__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Раскрытый пункт */
+
+.topic[open] .topic__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.topic__content {
+  max-width: 680px;
+
+  padding: 0 55px 30px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #625a54;
+}
+
+.topic__content p {
+  margin-bottom: 16px;
+}
+
+.topic__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   MATRIX SECTION
+========================================= */
+
+.digi-narrow .section-label {
+  text-align: left;
+}
+
+.digi-narrow .section-text {
+  text-align: left;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.digi-cta {
+  padding: 100px 0;
+
+  background: #e9e1d9;
+
+  text-align: center;
+}
+
+.digi-cta h2 {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.digi-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 54px;
+
+  margin-top: 32px;
+  padding: 0 34px;
+
+  border-radius: 999px;
+
+  background: #b79a79;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.digi-button:hover {
+  background: #aa8d6d;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(44, 38, 34, 0.12);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.digi-footer {
+  padding: 35px 20px 45px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  color: #756c65;
+}
+
+.digi-footer a {
+  transition: opacity 0.25s ease;
+}
+
+.digi-footer a:hover {
+  opacity: 0.5;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .digi-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .digi-hero {
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
+
+  .back-link {
+    margin-bottom: 60px;
+  }
+
+  .digi-title {
+    font-size: clamp(44px, 13vw, 62px);
+  }
+
+  .digi-intro {
+    font-size: 18px;
+  }
+
+  .digi-section {
+    padding: 65px 0;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  .section-text--large {
+    font-size: 19px;
+  }
+
+  .topic__summary {
+    grid-template-columns: 40px 1fr 26px;
+
+    padding: 23px 0;
+  }
+
+  .topic__title {
+    font-size: 21px;
+  }
+
+  .topic__content {
+    padding: 0 40px 25px;
+
+    font-size: 15px;
+  }
+
+  .topic__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .digi-cta {
+    padding: 75px 0;
+  }
+
+  .digi-cta h2 {
+    font-size: 38px;
+  }
+
+  .digi-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
