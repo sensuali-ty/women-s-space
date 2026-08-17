@@ -767,3 +767,28 @@ a {
     max-width: 330px;
   }
 }
+
+.product__image {
+  position: relative;
+
+  width: 100%;
+
+  overflow: visible;
+
+  background: #ddd6cf;
+}
+
+.product__image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.product:hover .product__image img {
+  transform: scale(1.015);
+}
