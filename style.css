@@ -318,3 +318,22 @@ a {
     gap: 20px;
   }
 }
+
+.icon-credit {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  font-size: 9px;
+  line-height: 1.4;
+
+  color: #9a8f86;
+
+  opacity: 0.65;
+
+  transition: opacity 0.2s ease;
+}
+
+.icon-credit:hover {
+  opacity: 1;
+}

@@ -1,0 +1,769 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #25211f;
+  color: #eee8e1;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.consultation-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #25211f;
+}
+
+/* =========================================
+   CONTAINERS
+========================================= */
+
+.consultation-container {
+  width: min(100%, 920px);
+  margin: 0 auto;
+
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.consultation-narrow {
+  width: min(100%, 720px);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.consultation-hero {
+  padding: 35px 0 100px;
+
+  text-align: center;
+
+  background: #25211f;
+}
+
+.back-link {
+  display: inline-block;
+
+  margin-bottom: 75px;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+
+  color: #a89d93;
+
+  transition: opacity 0.25s ease;
+}
+
+.back-link:hover {
+  opacity: 0.5;
+}
+
+.consultation-label {
+  margin-bottom: 22px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+
+  color: #a89d93;
+}
+
+.consultation-title {
+  max-width: 850px;
+  margin: 0 auto;
+
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -0.055em;
+
+  color: #f1ebe5;
+}
+
+.consultation-intro {
+  max-width: 600px;
+
+  margin: 30px auto 0;
+
+  font-size: 20px;
+  line-height: 1.55;
+
+  color: #bdb2a8;
+}
+
+.consultation-meta {
+  margin-top: 20px;
+
+  font-size: 13px;
+  letter-spacing: 0.04em;
+
+  color: #91867d;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.consultation-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+
+  margin-top: 32px;
+
+  padding: 0 32px;
+
+  border-radius: 999px;
+
+  background: #b79a79;
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.consultation-button:hover {
+  background: #d0b28e;
+
+  color: #25211f;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.consultation-section {
+  padding: 95px 0;
+
+  background: #25211f;
+}
+
+.consultation-section--border {
+  border-top: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.section-label {
+  margin-bottom: 30px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: #a89d93;
+}
+
+.section-title {
+  max-width: 650px;
+
+  margin-bottom: 30px;
+
+  font-size: clamp(34px, 5vw, 52px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -0.045em;
+
+  color: #eee8e1;
+}
+
+.section-text {
+  max-width: 680px;
+
+  margin-bottom: 22px;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #bdb2a8;
+}
+
+.section-text--bottom {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+.numbers-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-top: 55px;
+
+  border-top: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.number-item {
+  padding: 28px 30px 30px 0;
+
+  border-bottom: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.number-item:nth-child(odd) {
+  border-right: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.number-item:nth-child(even) {
+  padding-left: 30px;
+}
+
+.number-item__number {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
+  color: #81766e;
+}
+
+.number-item h3 {
+  margin-bottom: 10px;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+
+  color: #eee8e1;
+}
+
+.number-item p {
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #9f948b;
+}
+
+/* =========================================
+   REQUEST
+========================================= */
+
+.request-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 40px;
+}
+
+.request-tags span {
+  padding: 10px 15px;
+
+  border: 1px solid rgba(238, 232, 225, 0.16);
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.04em;
+
+  color: #bdb2a8;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* =========================================
+   FEATURE
+========================================= */
+
+.consultation-feature {
+  padding: 110px 0;
+
+  background: #302a27;
+}
+
+.feature-title {
+  max-width: 650px;
+
+  margin-bottom: 30px;
+
+  font-size: clamp(38px, 5.5vw, 60px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  color: #eee8e1;
+}
+
+.feature-text {
+  max-width: 650px;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #bdb2a8;
+}
+
+/* =========================================
+   ACCORDION
+========================================= */
+
+.consultation-topics {
+  border-top: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.consultation-topic {
+  border-bottom: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.consultation-topic__summary {
+  display: grid;
+
+  grid-template-columns: 55px 1fr 30px;
+
+  align-items: center;
+
+  padding: 28px 0;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+.consultation-topic__summary::-webkit-details-marker {
+  display: none;
+}
+
+.consultation-topic__number {
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
+  color: #81766e;
+}
+
+.consultation-topic__title {
+  padding-right: 20px;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+
+  color: #eee8e1;
+}
+
+.consultation-topic__icon {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(238, 232, 225, 0.3);
+
+  border-radius: 50%;
+}
+
+.consultation-topic__icon::before,
+.consultation-topic__icon::after {
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 1px;
+
+  background: #d7cdc4;
+
+  transform: translate(-50%, -50%);
+}
+
+.consultation-topic__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+
+  transition: transform 0.3s ease;
+}
+
+.consultation-topic[open] .consultation-topic__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.consultation-topic__content {
+  max-width: 680px;
+
+  padding: 0 55px 30px;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #bdb2a8;
+}
+
+.consultation-topic__content p {
+  margin-bottom: 18px;
+}
+
+.consultation-topic__content ul {
+  padding-left: 18px;
+}
+
+.consultation-topic__content li {
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   RESULT
+========================================= */
+
+.consultation-result {
+  padding: 110px 0;
+
+  background: #302a27;
+}
+
+.result-title {
+  max-width: 700px;
+
+  margin-bottom: 65px;
+
+  font-size: clamp(38px, 5.5vw, 60px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  color: #eee8e1;
+}
+
+.result-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.result-item {
+  padding: 28px 25px 0 0;
+}
+
+.result-item + .result-item {
+  padding-left: 25px;
+
+  border-left: 1px solid rgba(238, 232, 225, 0.12);
+}
+
+.result-item span {
+  display: block;
+
+  margin-bottom: 35px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
+  color: #81766e;
+}
+
+.result-item h3 {
+  margin-bottom: 10px;
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  color: #eee8e1;
+}
+
+.result-item p {
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #9f948b;
+}
+
+/* =========================================
+   BOOKING
+========================================= */
+
+.consultation-booking {
+  padding: 110px 0;
+
+  text-align: center;
+
+  background: #1e1a18;
+}
+
+.consultation-booking .section-label {
+  margin-bottom: 25px;
+}
+
+.booking-title {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  font-size: clamp(40px, 6vw, 68px);
+
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  letter-spacing: -0.05em;
+
+  color: #f1ebe5;
+}
+
+.booking-price {
+  margin-top: 35px;
+
+  font-size: 22px;
+
+  color: #eee8e1;
+}
+
+.booking-format {
+  margin-top: 8px;
+
+  font-size: 13px;
+
+  letter-spacing: 0.05em;
+
+  color: #91867d;
+}
+
+.consultation-button--light {
+  background: #b79a79;
+}
+
+.booking-payment {
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  color: #81766e;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.consultation-footer {
+  padding: 35px 20px 45px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  color: #81766e;
+
+  background: #1e1a18;
+}
+
+.consultation-footer a {
+  transition: opacity 0.25s ease;
+}
+
+.consultation-footer a:hover {
+  opacity: 0.5;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .consultation-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .consultation-hero {
+    padding-top: 25px;
+    padding-bottom: 75px;
+  }
+
+  .back-link {
+    margin-bottom: 60px;
+  }
+
+  .consultation-title {
+    font-size: clamp(44px, 13vw, 62px);
+  }
+
+  .consultation-intro {
+    font-size: 18px;
+  }
+
+  .consultation-section {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 40px;
+  }
+
+  .number-item,
+  .number-item:nth-child(even),
+  .number-item:nth-child(odd) {
+    padding: 25px 0;
+
+    border-right: none;
+  }
+
+  .number-item__number {
+    margin-bottom: 20px;
+  }
+
+  .number-item h3 {
+    font-size: 23px;
+  }
+
+  .request-tags {
+    margin-top: 30px;
+  }
+
+  .consultation-feature {
+    padding: 75px 0;
+  }
+
+  .feature-title {
+    font-size: 40px;
+  }
+
+  .feature-text {
+    font-size: 16px;
+  }
+
+  .consultation-topic__summary {
+    grid-template-columns: 40px 1fr 26px;
+
+    padding: 23px 0;
+  }
+
+  .consultation-topic__title {
+    font-size: 20px;
+  }
+
+  .consultation-topic__content {
+    padding: 0 40px 25px;
+
+    font-size: 15px;
+  }
+
+  .consultation-result {
+    padding: 75px 0;
+  }
+
+  .result-title {
+    font-size: 40px;
+
+    margin-bottom: 45px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-item,
+  .result-item + .result-item {
+    padding: 25px 0;
+
+    border-left: none;
+
+    border-bottom: 1px solid rgba(238, 232, 225, 0.12);
+  }
+
+  .result-item:last-child {
+    border-bottom: none;
+  }
+
+  .result-item span {
+    margin-bottom: 20px;
+  }
+
+  .consultation-booking {
+    padding: 80px 0;
+  }
+
+  .booking-title {
+    font-size: 42px;
+  }
+
+  .consultation-button {
+    width: 100%;
+    max-width: 330px;
+  }
+}
